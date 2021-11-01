@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+    <title>Example Login</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div>
+    <h1>Example Domain</h1>
+    <p>This example website is a demonstration for my attempt at authorization.</p>
+    <p>Your Name: <%= name %></p>
+    <p>Your Email: <%= email %></p>
+    <p>Your Cookie MaxAge: <%= Math.floor(maxage/1000/60)+'m' %></p>
+    <p>Your Session ID: <%= id %></p>
+    <p>
+    <% if (name != undefined) { %>
+        <a href="logout">Log Out.</a>
+    <% } else { %>
+        <a href="auth?signin=">Sign In.</a>  <a href="auth?signup=">Sign Up.</a> 
+    <% } %>
+    </p>
+</div>
+</body>
+</html>
